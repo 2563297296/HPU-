@@ -50,7 +50,6 @@ JSON 示例：
 - minSdk 23 / targetSdk 35；
 - 使用 `HttpsURLConnection` 直连学校站点（Cookie / 表单 / 分页）；
 - 本地缓存 + JobScheduler 后台刷新 + 通知；
-- R8 混淆与字符串加密（发布版）。
 
 ## 构建
 
