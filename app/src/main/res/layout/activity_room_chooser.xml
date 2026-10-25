@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="14dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/chooser_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="选择寝室"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/chooser_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="正在加载寝室列表…"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <Spinner
+        android:id="@+id/spinner_campus"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/input_background" />
+
+    <Spinner
+        android:id="@+id/spinner_building"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_background" />
+
+    <EditText
+        android:id="@+id/input_room_search"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_background"
+        android:hint="搜索寝室，如 471"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_muted" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <ListView
+            android:id="@+id/room_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            android:divider="@color/line"
+            android:dividerHeight="1dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/room_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="没有匹配的寝室"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_confirm_room"
+        style="@style/HpuButton.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="保存并进入" />
+
+    <Button
+        android:id="@+id/button_cancel_room"
+        style="@style/HpuButton.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="返回"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/hero_background"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/log_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_secondary_background"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:text="‹ 返回"
+            android:textColor="#D7E7F8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="运行日志"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="记录每次查询、切换寝室、连通性等操作详情"
+            android:textColor="#C9DAED"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/log_export"
+        style="@style/HpuButton.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:text="导出日志" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_background"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/log_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="2dp"
+            android:padding="12dp"
+            android:textIsSelectable="true"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp" />
+    </ScrollView>
+</LinearLayout>

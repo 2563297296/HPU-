@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#0B1F3A</color>
+    <color name="navy_light">#17395F</color>
+    <color name="accent">#2D6CDF</color>
+    <color name="accent_light">#6DA6FF</color>
+    <color name="yellow">#FFC857</color>
+    <color name="page">#F3F6FB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_primary">#142033</color>
+    <color name="text_secondary">#617089</color>
+    <color name="text_muted">#8C98AA</color>
+    <color name="line">#DCE4F0</color>
+    <color name="danger">#D9364F</color>
+    <color name="success">#1C8D62</color>
+    <color name="widget_text">#FFFFFFFF</color>
+    <color name="widget_muted">#B7C8DD</color>
+    <color name="widget_danger">#FF9BAA</color>
+    <color name="widget_card">#1A3555</color>
+    <color name="widget_card_alt">#132D4A</color>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="28dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hero_background"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.08"
+                android:text="HPU POWER"
+                android:textColor="#B9D4F2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="河南理工大学用电查询"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="手机直连学校站点 · 北校区 / 南校区"
+                android:textColor="#C9DAED"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="使用引导"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 · 选择寝室" android:fontFamily="sans-serif-medium" android:textColor="@color/text_primary" android:textSize="14sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="首次使用请选择校区和寝室，选择后会自动保存，下次直接进入。" android:textColor="@color/text_secondary" android:textSize="12sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="2 · 查询余额与明细" android:fontFamily="sans-serif-medium" android:textColor="@color/text_primary" android:textSize="14sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="查看照明 / 空调余额，以及 90 天或自定义时间范围的用电明细。" android:textColor="@color/text_secondary" android:textSize="12sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="3 · 多寝室与导出" android:fontFamily="sans-serif-medium" android:textColor="@color/text_primary" android:textSize="14sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="可添加多个寝室、左右滑动切换，并导出用电记录 CSV 表格。" android:textColor="@color/text_secondary" android:textSize="12sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="4 · 桌面小组件" android:fontFamily="sans-serif-medium" android:textColor="@color/text_primary" android:textSize="14sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="支持标准版和迷你版两种桌面小组件，随时查看最新余额。" android:textColor="@color/text_secondary" android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_start"
+            style="@style/HpuButton.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="开始使用" />
+    </LinearLayout>
+</ScrollView>

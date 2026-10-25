@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/page" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-medium"
+            android:text="设置" android:textColor="@color/text_primary" android:textSize="24sp" />
+        <TextView android:id="@+id/catalog_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="内置寝室目录 · 8174 个寝室" android:textColor="@color/text_secondary" android:textSize="13sp" />
+        <Button android:id="@+id/button_refresh_catalog" style="@style/HpuButton.Primary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="手动拉取寝室列表" />
+        <Button android:id="@+id/button_add_room" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="添加多个寝室" />
+        <Button android:id="@+id/button_manage_rooms" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="查看 / 删除已添加寝室" />
+        <TextView android:id="@+id/detail_range_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="查看明细：最近 90 天" android:textColor="@color/text_secondary" android:textSize="13sp" />
+        <Button android:id="@+id/button_detail_range" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="设置查看明细时间范围" />
+        <Button android:id="@+id/button_detail_range_reset" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="重置时间区间设置" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="sans-serif-medium" android:text="更新源（公告地址）" android:textColor="@color/text_primary" android:textSize="15sp" />
+        <EditText android:id="@+id/input_source_url" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="4dp" android:background="@drawable/input_background" android:hint="https://你的中转地址/config.json" android:inputType="textUri" android:maxLines="1" android:paddingLeft="10dp" android:paddingRight="10dp" android:textColor="@color/text_primary" />
+        <Button android:id="@+id/button_save_source" style="@style/HpuButton.Secondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="保存更新源" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="填写完整 JSON 地址后保存，App 启动时直接 GET 该地址读取公告；留空则不启用公告。" android:textColor="@color/text_muted" android:textSize="12sp" />
+
+        <TextView android:id="@+id/button_background_section" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="sans-serif-medium" android:paddingTop="6dp" android:paddingBottom="6dp" android:text="后台与通知 ▸" android:textColor="@color/navy" android:textSize="15sp" />
+        <LinearLayout android:id="@+id/background_section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="sans-serif-medium" android:text="后台自动更新" android:textColor="@color/text_primary" android:textSize="15sp" />
+        <CheckBox android:id="@+id/check_auto_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:buttonTint="@color/accent" android:text="后台自动更新电量" android:textColor="@color/text_primary" android:textSize="14sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="更新间隔（分钟）" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            <EditText android:id="@+id/input_refresh_interval" android:layout_width="80dp" android:layout_height="44dp" android:layout_marginLeft="10dp" android:background="@drawable/input_background" android:hint="60" android:inputType="number" android:maxLines="1" android:paddingLeft="10dp" android:paddingRight="10dp" android:textColor="@color/text_primary" />
+            <Button android:id="@+id/button_save_interval" style="@style/HpuButton.Secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:minHeight="40dp" android:text="保存" />
+        </LinearLayout>
+        <TextView android:id="@+id/auto_refresh_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:lineSpacingExtra="3dp" android:text="已开启后台自动更新。建议在系统设置中允许本应用后台自启动，并将电池策略设为“无限制”，否则系统可能拦截后台更新导致失败。此授权非强制。" android:textColor="@color/text_muted" android:textSize="12sp" android:visibility="gone" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:fontFamily="sans-serif-medium" android:text="低电量提醒" android:textColor="@color/text_primary" android:textSize="15sp" />
+        <CheckBox android:id="@+id/check_low_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:buttonTint="@color/accent" android:text="低电量提醒" android:textColor="@color/text_primary" android:textSize="14sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="照明阈值（度）" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            <EditText android:id="@+id/input_lighting_threshold" android:layout_width="80dp" android:layout_height="44dp" android:layout_marginLeft="10dp" android:background="@drawable/input_background" android:hint="10" android:inputType="numberDecimal" android:maxLines="1" android:paddingLeft="10dp" android:paddingRight="10dp" android:textColor="@color/text_primary" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="空调阈值（度）" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            <EditText android:id="@+id/input_air_threshold" android:layout_width="80dp" android:layout_height="44dp" android:layout_marginLeft="10dp" android:background="@drawable/input_background" android:hint="10" android:inputType="numberDecimal" android:maxLines="1" android:paddingLeft="10dp" android:paddingRight="10dp" android:textColor="@color/text_primary" />
+        </LinearLayout>
+        <CheckBox android:id="@+id/check_low_lighting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:buttonTint="@color/accent" android:text="照明" android:textColor="@color/text_primary" android:textSize="14sp" />
+        <CheckBox android:id="@+id/check_low_air" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:buttonTint="@color/accent" android:text="空调" android:textColor="@color/text_primary" android:textSize="14sp" />
+        <Button android:id="@+id/button_select_remind_rooms" style="@style/HpuButton.Secondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="选择提醒寝室" />
+        <TextView android:id="@+id/low_battery_rooms" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="已选寝室：未选择" android:textColor="@color/text_secondary" android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <Button android:id="@+id/button_export_usage" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="导出用电记录（CSV 表格）" />
+        <Button android:id="@+id/button_export_log" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="查看日志" />
+        <Button android:id="@+id/button_feedback" style="@style/HpuButton.Secondary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="发送反馈" />
+        <TextView android:id="@+id/settings_detail" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:lineSpacingExtra="4dp" android:text="反馈邮箱：your-email@example.com"
+            android:textColor="@color/text_secondary" android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

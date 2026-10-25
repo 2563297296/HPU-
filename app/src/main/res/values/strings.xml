@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HPU 用电</string>
+    <string name="widget_name">HPU 用电</string>
+    <string name="widget_small_name">HPU 用电 · 迷你</string>
+    <string name="usage_detail_name">用电明细</string>
+    <string name="room_chooser_name">选择寝室</string>
+    <string name="onboarding_name">欢迎使用</string>
+    <string name="recharge_name">充值记录</string>
+    <string name="log_name">运行日志</string>
+    <string name="room_list_name">已添加寝室</string>
+    <string name="preferences_name">设置</string>
+</resources>

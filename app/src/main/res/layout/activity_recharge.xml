@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/hero_background"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:id="@+id/recharge_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_secondary_background"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:text="‹ 返回"
+            android:textColor="#D7E7F8"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="充值记录"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/recharge_room_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#C9DAED"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recharge_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/card_background"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="4dp"
+        android:padding="14dp"
+        android:text="正在查询充值记录…"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/recharge_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:paddingBottom="14dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/recharge_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:padding="28dp"
+            android:text="暂无充值记录"
+            android:textColor="@color/text_muted"
+            android:textSize="13sp" />
+    </FrameLayout>
+</LinearLayout>
